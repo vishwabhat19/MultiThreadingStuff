@@ -1,5 +1,8 @@
 package com.threads;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,18 +12,7 @@ public class AddData {
 	
 	public static void main(String args[]) throws InterruptedException, ExecutionException {
 		
-		ExecutorService service = null;
 		
-		try {
-			service = Executors.newSingleThreadExecutor();
-			Future<Integer> result = service.submit(() -> 30+11);
-			System.out.println(result.get());
-		}
-		finally {
-			if(null!=service) {
-				service.shutdown();
-			}
-		}
 	}
 
 }
